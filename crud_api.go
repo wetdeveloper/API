@@ -11,6 +11,6 @@ func Num(c echo.Context) error {
 	return c.String(http.StatusOK, num)
 }
 
-func crudPage(c echo.Context) error {
+func CrudForm(c echo.Context) error {
 	return c.Render(http.StatusOK, "crudPage.html", map[string]interface{}{})
 	}
