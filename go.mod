@@ -1,4 +1,4 @@
-module github.com/wetdeveloper/API
+module github.com/wetdeveloper/crud-api
 
 go 1.17
 
