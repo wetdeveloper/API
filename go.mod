@@ -1,4 +1,4 @@
-module API.go
+module github.com/wetdeveloper/API
 
 go 1.17
 
