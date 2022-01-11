@@ -1,4 +1,4 @@
-package crud-api
+package crud_api
 
 import (
 	"net/http"
