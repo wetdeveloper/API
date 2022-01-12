@@ -21,7 +21,7 @@ func Cud(c echo.Context) error {
 	operation := c.FormValue("operation")
 	username := c.FormValue("username")
 	password := c.FormValue("password")
-	mydb, err := connection.Connect()
+	mydb,_:= connection.Connect()
 	if operation == "C" {
 		if connection.InsertUser(mydb, username, password) {
 			return c.String(http.StatusOK, "Created")
