@@ -44,4 +44,4 @@ func Cud(c echo.Context) error {
 //Read
 func Read(c echo.Context) error {
 			return c.Render(http.StatusOK, "userslist.html", connection.ListUsers(mydb))
-		})
+		}
