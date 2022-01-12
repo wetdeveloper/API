@@ -35,7 +35,7 @@ func Cud(c echo.Context) error {
 		}
 		return c.String(http.StatusOK, "There is an error")
 	} else if operation == "U" {
-		if connection.UpdateUser(mydb, username,strconv.FormatUint(uint64(hash(password),10)) {
+		if connection.UpdateUser(mydb, username,strconv.FormatUint(uint64(hash(password)),10)) {
 			return c.String(http.StatusOK, "Updated")
 		}
 		return c.String(http.StatusOK, "There is an error")
