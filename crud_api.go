@@ -43,5 +43,6 @@ func Cud(c echo.Context) error {
 }
 //Read
 func Read(c echo.Context) error {
+			mydb,_:= connection.Connect()
 			return c.Render(http.StatusOK, "userslist.html", connection.ListUsers(mydb))
 		}
