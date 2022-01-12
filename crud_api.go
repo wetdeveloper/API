@@ -41,3 +41,7 @@ func Cud(c echo.Context) error {
 	return c.String(http.StatusOK, "Not valid operation")
 
 }
+//Read
+func Read(c echo.Context) error {
+			return c.Render(http.StatusOK, "userslist.html", connection.ListUsers(mydb))
+		})
