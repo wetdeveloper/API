@@ -30,12 +30,12 @@ func Cud(c echo.Context) error {
 	password := c.FormValue("password")
 	mydb,_:= connection.Connect()
 	if operation == "C" {
-		if connection.InsertUser(mydb, username,strconv.FormatUint(uint64(hash(password)),10) {
+		if connection.InsertUser(mydb, username,strconv.FormatUint(uint64(hash(password)),10)) {
 			return c.String(http.StatusOK, "Created")
 		}
 		return c.String(http.StatusOK, "There is an error")
 	} else if operation == "U" {
-		if connection.UpdateUser(mydb, username,strconv.FormatUint(uint64(hash(password),10) {
+		if connection.UpdateUser(mydb, username,strconv.FormatUint(uint64(hash(password),10)) {
 			return c.String(http.StatusOK, "Updated")
 		}
 		return c.String(http.StatusOK, "There is an error")
